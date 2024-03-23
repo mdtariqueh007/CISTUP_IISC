@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [image, setImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
+  const [vehicleCount, setVehicleCount] = useState(0);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -26,6 +27,8 @@ function App() {
       .then(response => response.json())
       .then(data => {
         const processedImageData = data.processedImage;
+        const count = data.vehicleCount;
+        setVehicleCount(count);
         if (processedImageData) {
           setProcessedImage(`data:image/jpeg;base64,${processedImageData}`);
         } else {
@@ -52,6 +55,10 @@ function App() {
         <h2>Processed Image</h2>
         {processedImage && (
           <img src={processedImage} alt="Processed" />
+        )}
+        <h2>Vehicle Count</h2>
+        {vehicleCount && (
+          <h3>{vehicleCount}</h3>
         )}
       </div>
     </div>
