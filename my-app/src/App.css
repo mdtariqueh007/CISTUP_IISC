@@ -1,77 +1,118 @@
+/* Apply center alignment to the entire application */
 .App {
   text-align: center;
 }
 
+/* Styles for the header section */
 .App-header {
-  background-color: #00246B;
+  background: linear-gradient(to bottom right, #556270, #4ECDC4); /* Gradient background */
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff; /* Text color */
+  transition: background-color 0.3s ease;
 }
+
+
+
+
+/* Container for the logo */
 .logo-container {
   margin-right: 20px; 
 }
 
+/* Logo image styling */
 .logo {
   height: 100px; 
   width: auto;
 }
 
+/* Styles for the upload form */
 .upload-form {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.image-display {
-  margin-top: 40px;
-}
-
+/* Button styles */
 .button {
-  background-color: #007bff; 
+  background-color: #e67e22; /* Orange */
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0056b3; 
+  background-color: #d35400; /* Darker orange */
 }
 
-
+/* Disabled button styles */
 .button:disabled {
-  background-color: #ccc;
+  background-color: #95a5a6; /* Gray */
   cursor: not-allowed;
 }
 
-img {
+/* Image styling */
+.image {
   max-width: 100%;
   max-height: 400px;
   margin-top: 10px;
-}
-.object-card {
-  background-color: #f0f0f0;
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Error message styling */
+.error-message {
+  color: #e74c3c; /* Red */
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+/* Card style for displaying object information */
+.object-card {
+  background: linear-gradient(to right, #2c3e50, #3498db); /* Dark gray to blue gradient */
+  color: #ecf0f1; /* Light gray */
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.object-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to right, #2c3e50, #1abc9c); /* Dark gray to green gradient on hover */
+}
+
+/* Styles for object information */
 .object-info {
-  font-size: 16px;
+  font-size: 18px;
 }
 
+/* Heading style within object information */
 .object-info h3 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
+/* Paragraph style within object information */
 .object-info p {
   margin: 0;
+}
+
+.footer {
+  background: linear-gradient(to bottom right, #556270, #4ECDC4); /* Gradient background */
+  color: #fff; /* Text color */
+  text-align: center;
+  padding: 20px;
 }
