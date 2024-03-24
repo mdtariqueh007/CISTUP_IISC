@@ -18,6 +18,11 @@ Transportation Image Object Detection is a web application designed to perform o
 
 ![Screenshot 2](https://github.com/mdtariqueh007/CISTUP_IISC/blob/main/Screenshots_Demo/2.png)
 
+![Screenshot 1](https://github.com/mdtariqueh007/CISTUP_IISC/blob/main/Screenshots_Demo/3.png)
+
+
+![Screenshot 2](https://github.com/mdtariqueh007/CISTUP_IISC/blob/main/Screenshots_Demo/4.png)
+
 
 <!-- Table of Contents -->
 ## Table of Contents
