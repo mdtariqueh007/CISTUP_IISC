@@ -41,6 +41,8 @@ cd my-app
 cd ../Server
 6. Install backend dependencies using `pip install -r requirements.txt`.
 
+Note: Docker files are in my-app folder
+
 <!-- Usage Instructions -->
 ## Usage
 1. Start the frontend development server.
