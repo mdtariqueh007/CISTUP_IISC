@@ -78,4 +78,4 @@ For further assistance or inquiries, please contact:
 
 <!-- Acknowledgements -->
 ## Acknowledgements
-Special thanks to [CISTUP IISC](http://www.cistup.iisc.ac.in/) for giving me this project as assignment to learn something new.
+Special thanks to [CISTUP IISC](https://cistup.iisc.ac.in/) for giving me this project as assignment to learn something new.
