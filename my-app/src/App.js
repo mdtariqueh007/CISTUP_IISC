@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
-import logo from "./iisc.png";
+import logo from "./eye_logo.jpg";
 
 function App() {
   const [image, setImage] = useState(null);
   const [objectsDetected, setObjectsDetected] = useState([]);
   const [vehicleCount, setVehicleCount] = useState(0);
+  const [carCount, setCarCount] = useState(0);
+  const [busCount, setBusCount] = useState(0);
+  const [truckCount, setTruckCount] = useState(0);
+  const [motorcycleCount, setMotorCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [processedImage, setProcessedImage] = useState(null);
   const [error, setError] = useState(null);
@@ -36,8 +40,16 @@ function App() {
       .then(data => {
         const detectedObjects = data.objectsDetected || [];
         const count = data.vehicleCount || 0;
+        const car = data.carCount || 0;
+        const bus = data.busCount || 0;
+        const truck = data.truckCount || 0;
+        const motorcycle = data.motorcycleCount || 0;
         setObjectsDetected(detectedObjects);
         setVehicleCount(count);
+        setCarCount(car);
+        setBusCount(bus);
+        setTruckCount(truck);
+        setMotorCount(motorcycle);
         const processedImageData = data.annotatedImage;
         if(processedImageData){
           setProcessedImage(`data:image/jpeg;base64,${processedImageData}`);
@@ -77,8 +89,14 @@ function App() {
           )}
         </div>
         <h2>Vehicle Count: {vehicleCount}</h2>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <h2 style={{ marginRight: '20px' }}>Car Count: {carCount}</h2>
+          <h2 style={{ marginRight: '20px' }}>Bus Count: {busCount}</h2>
+          <h2 style={{ marginRight: '20px' }}>Truck Count: {truckCount}</h2>
+          <h2>Motorcycle Count: {motorcycleCount}</h2>
+        </div>
         <div className="detection-results">
-          <h2>YOLO v8 Detected Objects</h2>
+          <h2>Detected Objects</h2>
           {objectsDetected.length > 0 ? (
             <ul>
               {objectsDetected.map((obj, index) => (

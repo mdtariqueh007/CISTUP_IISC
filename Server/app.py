@@ -39,10 +39,23 @@ def upload_file():
     
     cnt = 0
 
+    car = 0
+    bus = 0
+    truck = 0
+    motocycle = 0
+
     for r in results:
         for box in r.boxes:
             if classNames[int(box.cls[0])] in ["car","truck","bus","motorcycle"]:
                 cnt += 1
+            if classNames[int(box.cls[0])]=="car":
+                car += 1
+            if classNames[int(box.cls[0])]=="bus":
+                bus += 1
+            if classNames[int(box.cls[0])]=="truck":
+                truck += 1
+            if classNames[int(box.cls[0])]=="motorcycle":
+                motocycle += 1
             coor = box.xywh[0]
             # print(coor)
             x = int(coor[0])
@@ -60,7 +73,7 @@ def upload_file():
     processed_img = img_arr
     _, encoded_img = cv2.imencode('.jpg', processed_img)
     processed_img_base64 = base64.b64encode(encoded_img).decode('utf-8')
-    return jsonify({'objectsDetected': objects_detected, 'vehicleCount': cnt, 'annotatedImage':processed_img_base64})
+    return jsonify({'objectsDetected': objects_detected, 'vehicleCount': cnt, 'annotatedImage':processed_img_base64, 'carCount': car, 'busCount': bus, 'truckCount': truck, 'motorcycleCount': motocycle})
 
 if __name__ == '__main__':
     app.run(debug=True)
