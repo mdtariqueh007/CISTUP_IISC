@@ -1,5 +1,5 @@
 <!-- Project Title -->
-<h1 align="center">CISTUP_IISC</h1>
+<h1 align="center">Transportation Image Object Detection</h1>
 
 <!-- Shields -->
 <p align="center">
@@ -9,7 +9,7 @@
 
 <!-- Project Description -->
 ## Description
-CISTUP_IISC is a web application designed to perform object detection on uploaded images, specifically recognizing types of vehicles and counting them. The application features a user-friendly interface with a navigation bar, an image upload form, and sections to display both the original and processed images.
+Transportation Image Object Detection is a web application designed to perform object detection on uploaded images, specifically recognizing types of vehicles and counting them. The application features a user-friendly interface with a navigation bar, an image upload form, and sections to display both the original and processed images and also individual detected objects as cards.
 
 <!-- Table of Contents -->
 ## Table of Contents
@@ -44,15 +44,17 @@ cd ../Server
 <!-- Usage Instructions -->
 ## Usage
 1. Start the frontend development server.
-npm start
-2. Access the frontend application at [http://localhost:3000](http://localhost:3000).
-3. Start the backend server.
-python app.py
-4. Use the web application according to its features.
+2. cd to my-app
+3. npm start
+3. Access the frontend application at [http://localhost:3000](http://localhost:3000).
+4. Start the backend server.
+5. cd to Server
+6. python app.py
+7. Use the web application according to its features.
 
 <!-- Testing Instructions -->
 ## Testing
-- Run tests using the following command:
+- Run tests using the following command from my-app directory:
 npm test
 - Describe any additional testing procedures or frameworks used.
 
@@ -76,4 +78,4 @@ For further assistance or inquiries, please contact:
 
 <!-- Acknowledgements -->
 ## Acknowledgements
-Special thanks to [CISTUP IISC](http://www.cistup.iisc.ac.in/) for inspiration and guidance.
+Special thanks to [CISTUP IISC](http://www.cistup.iisc.ac.in/) for giving me this project as assignment to learn something new.
