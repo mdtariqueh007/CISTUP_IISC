@@ -11,6 +11,14 @@
 ## Description
 Transportation Image Object Detection is a web application designed to perform object detection on uploaded images, specifically recognizing types of vehicles and counting them. The application features a user-friendly interface with a navigation bar, an image upload form, and sections to display both the original and processed images and also individual detected objects as cards.
 
+## Demo Screenshots
+
+![Screenshot 1](https://github.com/mdtariqueh007/CISTUP_IISC/blob/main/Screenshots_Demo/1.png)
+
+
+![Screenshot 2](https://github.com/mdtariqueh007/CISTUP_IISC/blob/main/Screenshots_Demo/2.png)
+
+
 <!-- Table of Contents -->
 ## Table of Contents
 - [Installation](#installation)
